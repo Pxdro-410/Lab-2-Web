@@ -30,3 +30,7 @@ Commercial support is available at
 </html>
 
 (5 puntos) Que pasa si tratan de hacer una solicitud de HTTP desde el servidor hacia su computadora?
+root@cc3062-10:/var/www/html/lab2/241286# curl http://172.22.32.1
+curl: (28) Failed to connect to 172.22.32.1 port 80 after 135146 ms: Couldn't connect to server
+
+Falla la solicitud porque intenta acceder a mi IP privada desde la red externa del servidor, ya que al ser una IP 172 no son enrutables desde el server.
