@@ -1,7 +1,7 @@
 Pedro Caso - 241286
 respuestas.txt
 Lab2 - Web
----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 (10 puntos) Utilizando curl, hagan una solicitud de HTTP al servidor
 
 root@cc3062-10:/var/www/html/lab2/241286# curl http://35.239.213.125
@@ -33,4 +33,28 @@ Commercial support is available at
 root@cc3062-10:/var/www/html/lab2/241286# curl http://172.22.32.1
 curl: (28) Failed to connect to 172.22.32.1 port 80 after 135146 ms: Couldn't connect to server
 
-Falla la solicitud porque intenta acceder a mi IP privada desde la red externa del servidor, ya que al ser una IP 172 no son enrutables desde el server.
+Falla la solicitud porque intenta acceder a mi IP privada desde la red externa del servidor, 
+ya que al ser una IP 172 no son enrutables desde el server.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+(10 puntos) Utilizando tail dentro del servidor, obtengan las últimas 15 líneas del archivo /var/log/nginx/access.log
+
+root@cc3062-10:/var/www/html/lab2/241286# tail -n 15 /var/log/nginx/access.log
+141.101.95.70 - - [21/Feb/2026:23:00:29 +0000] "GET /webhooks/incoming/stripe.json HTTP/1.1" 404 134 "-" "curl/8.7.1"
+141.101.95.70 - - [21/Feb/2026:23:00:29 +0000] "GET /stripe-keys.json HTTP/1.1" 404 134 "-" "curl/8.7.1"
+172.69.223.91 - - [21/Feb/2026:23:00:29 +0000] "GET /src/config/stripe.js HTTP/1.1" 404 134 "-" "curl/8.7.1"
+141.101.95.70 - - [21/Feb/2026:23:00:30 +0000] "GET /stripe.json HTTP/1.1" 404 134 "-" "curl/8.7.1"
+141.101.95.70 - - [21/Feb/2026:23:00:30 +0000] "GET /stripe-credentials.json HTTP/1.1" 404 134 "-" "curl/8.7.1"
+141.101.95.70 - - [21/Feb/2026:23:00:30 +0000] "GET /.well-known/stripe/ HTTP/1.1" 404 134 "-" "curl/8.7.1"
+141.101.95.70 - - [21/Feb/2026:23:00:30 +0000] "GET /.stripe/ HTTP/1.1" 404 134 "-" "curl/8.7.1"
+141.101.95.70 - - [21/Feb/2026:23:00:30 +0000] "GET /stripe/.env HTTP/1.1" 404 134 "-" "curl/8.7.1"
+141.101.95.70 - - [21/Feb/2026:23:00:30 +0000] "GET /config/stripe.json HTTP/1.1" 404 134 "-" "curl/8.7.1"
+141.101.95.70 - - [21/Feb/2026:23:00:30 +0000] "GET /plugins/payments/stripe.json HTTP/1.1" 404 134 "-" "curl/8.7.1"
+60.23.232.97 - - [21/Feb/2026:23:05:15 +0000] "POST /HNAP1/ HTTP/1.0" 404 162 "-" "-"
+185.242.226.80 - - [21/Feb/2026:23:16:44 +0000] "GET / HTTP/1.1" 200 454 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+10.128.0.4 - - [21/Feb/2026:23:21:39 +0000] "GET / HTTP/1.1" 200 682 "-" "curl/8.5.0"
+190.14.141.88 - - [21/Feb/2026:23:21:51 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Safari/605.1.15"
+190.14.134.88 - - [21/Feb/2026:23:21:52 +0000] "GET /Video.gif HTTP/1.1" 304 0 "http://35.239.213.125/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Safari/605.1.15"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
