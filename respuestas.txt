@@ -100,3 +100,14 @@ Ips obtenidas: 45.223.155.41 y 45.223.56.41
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+(5 puntos) Cuanta memoria RAM, total usada y libre, tiene el servidor? (su respuesta debe estar en MB)
+
+root@cc3062-10:/var/www/html/lab2/241286# free -m
+               total        used        free      shared  buff/cache   available
+Mem:             958         355         507           0         270         602
+Swap:              0           0           0
+
+tiene un total de 958 MB, con un uso de 355 MB y libre de 507 MB.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
