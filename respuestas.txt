@@ -58,3 +58,12 @@ root@cc3062-10:/var/www/html/lab2/241286# tail -n 15 /var/log/nginx/access.log
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+(10 puntos) Utilizando ps y grep identifiquen qué procesos está corriendo amazon dentro del servidor
+
+root@cc3062-10:/var/www/html/lab2/241286# ps aux | grep amazon
+root      348825  0.0  0.2   3956  2100 pts/1    S+   23:50   0:00 grep --color=auto amazon
+root@cc3062-10:/var/www/html/lab2/241286# ps aux | grep aws
+root      348830  0.0  0.2   3956  2120 pts/1    S+   23:51   0:00 grep --color=auto aws
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
