@@ -111,3 +111,20 @@ tiene un total de 958 MB, con un uso de 355 MB y libre de 507 MB.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+(5 puntos) Cuanta espacio de disco, total usado y disponible, tiene el servidor? (su respuesta debe estar en MB)
+
+root@cc3062-10:/var/www/html/lab2/241286# df -m
+Filesystem     1M-blocks  Used Available Use% Mounted on
+/dev/root           8854  5453      3385  62% /
+tmpfs                480     0       480   0% /dev/shm
+tmpfs                192     1       191   1% /run
+tmpfs                  5     0         5   0% /run/lock
+efivarfs               1     1         1  48% /sys/firmware/efi/efivars
+/dev/sda16           881    73       747   9% /boot
+/dev/sda15           105     7        99   6% /boot/efi
+tmpfs                 96     1        96   1% /run/user/0
+
+Tiene un total de 8854 MB, con 5453 MB en uso y con 3385 MB disponible en el disco.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
